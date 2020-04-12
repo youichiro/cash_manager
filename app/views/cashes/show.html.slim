@@ -1,0 +1,24 @@
+- content_for :title, '詳細'
+
+p
+  strong Name:
+  = @cash.name
+p
+  strong Label:
+  = @cash.label
+p
+  strong Price:
+  = @cash.price
+p
+  strong Date:
+  = @cash.date
+p
+  strong Memo:
+  = @cash.memo
+p
+  strong Place:
+  = @cash.place
+
+=> link_to 'Edit', edit_cash_path(@cash)
+'|
+=< link_to 'Back', cashes_path

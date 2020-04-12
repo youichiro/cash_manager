@@ -1,0 +1,11 @@
+.o-header
+  .o-header__left-icon
+    .a-icon
+      = link_to cashes_path, class: "a-icon__home" do
+        i.fas.fa-home
+  .o-header__title
+    = yield(:title)
+  .o-header__right-icon
+    .a-icon
+      = link_to "", class: "a-icon__user" do
+        i.fas.fa-user-circle

@@ -1,0 +1,15 @@
+.a-icon {
+  font-size: 2.25rem;
+  text-decoration: none;
+}
+
+.a-icon__home,
+.a-icon__user {
+  color: $base;
+  transition: all .2s ease-out;
+
+  &:hover {
+    color: $base;
+    opacity: .7;
+  }
+}

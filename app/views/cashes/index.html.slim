@@ -1,0 +1,33 @@
+- content_for :title, 'ダッシュボード'
+
+.summary
+  | summary
+
+
+
+table
+  thead
+    tr
+      th Name
+      th Label
+      th Price
+      th Date
+      th Memo
+      th Place
+      th
+      th
+      th
+
+  tbody
+    - @cashes.each do |cash|
+      tr
+        td = cash.name
+        td = cash.label
+        td = cash.price
+        td = link_to 'Show', cash
+        td = link_to 'Edit', edit_cash_path(cash)
+        td = link_to 'Destroy', cash, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Cash', new_cash_path

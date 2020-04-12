@@ -1,0 +1,17 @@
+$header-height: 3.5rem;
+$footer-height: 3.5rem;
+
+.t-csm__header {
+  height: $header-height;
+}
+
+.t-csm__main {
+  background-color: $background;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  padding: 0.5rem 1.5rem;
+}
+
+.t-csm__footer {
+  height: $footer-height;
+  background-color: $base;
+}
