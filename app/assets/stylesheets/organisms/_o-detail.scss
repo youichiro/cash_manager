@@ -1,0 +1,36 @@
+.o-detail__items {}
+
+.o-detail__item {
+  display: flex;
+  height: 3em;
+  align-items: center;
+  border-bottom: solid 1px $border;
+}
+
+.o-detail__start {
+  flex: 0 0 4em;
+  display: flex;
+  align-items: center;
+  color: $weaked-text;
+}
+
+.o-detail__end {
+  flex: 100;
+  text-align: right;
+  padding-right: 1em;
+  font-size: 1.25em;
+}
+
+.o-detail__memo-title {
+  color: $weaked-text;
+  padding: 1.5em 0 0 0;
+}
+
+.o-detail__memo-body {
+  padding: 0.5em;
+}
+
+.o-detail__btn {
+  flex: 1;
+  text-align: center;
+}

@@ -1,31 +1,56 @@
-= form_for @cash do |f|
-  - if @cash.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@cash.errors.count, "error")} prohibited this cash from being saved:"
-      ul
-        - @cash.errors.full_messages.each do |message|
-          li = message
+.m-form
+  .m-form__items
+    = form_for @cash do |f|
+      - if @cash.errors.any?
+        #error_explanation
+          h2 = "#{pluralize(@cash.errors.count, "error")} prohibited this cash from being saved:"
+          ul
+            - @cash.errors.full_messages.each do |message|
+              li = message
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :label
-    / = f.text_field :label
-    = f.select :label, %w(支出 収入)
-  .field
-    = f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |ff|
-      = ff.label { ff.check_box + ff.text }
-  .field
-    = f.label :price
-    = f.number_field :price
-  .field
-    = f.label :date
-    = f.date_select :date
-  .field
-    = f.label :memo
-    = f.text_area :memo
-  .field
-    = f.label :place
-    = f.text_field :place
-  .actions = f.submit
+      .m-form__item
+        .m-form__label
+          = f.label :name, class: 'a-form__label'
+        .m-form__field
+          = f.text_field :name, class: 'a-form__text-field'
+      .m-form__item
+        .m-form__label
+          = f.label :label, class: 'a-form__label'
+        .m-form__field
+          = f.select :label, %w(支出 収入), {}, class: 'a-form__select'
+      .m-form__item
+        .m-form__label
+          | タグ
+        .m-form__field
+          - if Tag.exists?
+            .a-form__collection-checkboxes
+              = f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |tag|
+                = tag.label do
+                  = tag.check_box
+                  .a-form__checkbox-label = tag.object.name
+          - else
+            = link_to new_tag_path, class: 'a-btn__new-tag' do
+              | タグを作成する
+      .m-form__item
+        .m-form__label
+          = f.label :price, class: 'a-form__label'
+        .m-form__field
+          = f.number_field :price, class: 'a-form__number-field'
+      .m-form__item
+        .m-form__label
+          = f.label :date, class: 'a-form__label'
+        .m-form__field
+          = f.date_select :date, class: 'a-form__date-select'
+      .m-form__item
+        .m-form__label
+          = f.label :place, class: 'a-form__label'
+        .m-form__field
+          = f.text_field :place, class: 'a-form__text-field'
+      .m-form__item
+        .m-form__label
+          = f.label :memo, class: 'a-form__label'
+        .m-form__field
+          = f.text_area :memo, class: 'a-form__textarea'
+
+      .m-form__actions
+        = f.submit

@@ -1,0 +1,13 @@
+.o-footer {
+  height: 100%;
+}
+
+.o-footer__items {
+  @include flex-center;
+  text-align: center;
+  height: 100%;
+}
+
+.o-footer__item {
+  flex: 1;
+}

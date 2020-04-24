@@ -1,0 +1,23 @@
+.t-detail {}
+
+.t-detail__date {
+  @include flex-center(row);
+  border-bottom: solid 1px $border;
+  padding-bottom: 1em;
+  color: $weaked-text;
+}
+
+.t-detail__main {}
+
+.t-detail__memo {
+  padding-bottom: 5rem;
+  margin-bottom: 3rem;
+  border-bottom: solid 1px $border;
+}
+
+.t-detail__buttons {
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

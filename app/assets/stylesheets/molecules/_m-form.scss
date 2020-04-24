@@ -1,0 +1,23 @@
+.m-form {}
+
+.m-fotm__items {}
+
+.m-form__item {
+  line-height: 3rem;
+  display: flex;
+
+  &:not(:last-child) {
+    // border-bottom: solid 1px $border;
+  }
+}
+
+.m-form__label {
+  flex: 0 0 5rem;
+  color: $weaked-text;
+  align-self: center;
+}
+
+.m-form__field {
+  flex: 100;
+  margin: 0.5rem;
+}

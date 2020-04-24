@@ -1,0 +1,56 @@
+.a-form__text-field,
+.a-form__number-field {
+  border: solid 2px $border;
+  border-radius: 6px;
+  line-height: 3rem;
+  width: 80%;
+  padding: 0 1rem;
+  transition: all .2s ease-out;
+
+  &:focus {
+    border-color: $main;
+    box-shadow: 0 0 3px rgba($main, .6);
+  }
+}
+
+.a-form__select {
+  border: solid 2px $border;
+  border-radius: 6px;
+  padding: 0 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba($border, .6);
+}
+
+.a-form__date-select {}
+
+.a-form__textarea {}
+
+
+.a-form__collection-checkboxes>label {
+  display: flex;
+
+  input {
+    display: none;
+  }
+
+  .a-form__checkbox-label {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+
+  .a-form__checkbox-label:before {
+    content: "";
+    border: solid 2px $border;
+    border-radius: 50%;
+    // padding-left: 1.5rem;
+    // margin-right: 0.5rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    transition: all .2s ease-out;
+  }
+
+}

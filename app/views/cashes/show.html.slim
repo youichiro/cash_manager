@@ -1,24 +1,37 @@
 - content_for :title, '詳細'
 
-p
-  strong Name:
-  = @cash.name
-p
-  strong Label:
-  = @cash.label
-p
-  strong Price:
-  = @cash.price
-p
-  strong Date:
-  = @cash.date
-p
-  strong Memo:
-  = @cash.memo
-p
-  strong Place:
-  = @cash.place
-
-=> link_to 'Edit', edit_cash_path(@cash)
-'|
-=< link_to 'Back', cashes_path
+.t-detail
+  .t-detail__date
+    = @cash.date.year.to_s + '年' + @cash.date.month.to_s + '月' + @cash.date.day.to_s + '日'
+  .t-detail__main
+    .o-detail__items
+      .o-detail__item
+        .o-detail__start
+          = @cash.label
+        .o-detail__end
+          = @cash.price
+      .o-detail__item
+        .o-detail__start
+          | 内容
+        .o-detail__end
+          = @cash.name
+      .o-detail__item
+        .o-detail__start
+          | 場所
+        .o-detail__end
+          = @cash.place
+  .t-detail__memo
+    .o-detail__memo-title
+      | メモ
+    .o-detail__memo-body
+      = @cash.memo
+  .t-detail__buttons
+    .o-detail__btn
+      = link_to edit_cash_path(@cash), class: 'a-btn__edit' do
+        | 編集
+    .o-detail__btn
+      = link_to @cash, data: { confirm: 'Are you sure?' }, method: :delete, class: 'a-btn__delete' do
+        | 削除
+    .o-detail__btn
+      = link_to cashes_path, class: 'a-btn__back' do
+        | 戻る

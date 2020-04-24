@@ -1,33 +1,29 @@
 - content_for :title, 'ダッシュボード'
 
-.summary
-  | summary
+.t-dashbord
+  .t-dashbord__summary
+    .m-summary
+      .m-summary__items
+        .m-summary__item
+          | 今月の支出 2000円
+        .m-summary__item
+          | 今月の収入 3000円
 
-
-
-table
-  thead
-    tr
-      th Name
-      th Label
-      th Price
-      th Date
-      th Memo
-      th Place
-      th
-      th
-      th
-
-  tbody
-    - @cashes.each do |cash|
-      tr
-        td = cash.name
-        td = cash.label
-        td = cash.price
-        td = link_to 'Show', cash
-        td = link_to 'Edit', edit_cash_path(cash)
-        td = link_to 'Destroy', cash, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Cash', new_cash_path
+  .t-dashbord__monthly-reports
+    .t-dashbord__monthly-report
+      .m-monthly-report
+        .m-monthly-report__title
+          | 2020年4月
+        ul.m-monthly-report__items
+          - @cashes.each do |cash|
+            .m-monthly-report__item
+              = link_to cash, class: "m-monthly-report__link" do
+                li.m-monthly-report__item-inner
+                  .m-monthly-report__date
+                    = cash.date.month.to_s + '/' + cash.date.day.to_s
+                  .m-monthly-report__label
+                    = cash.label
+                  .m-monthly-report__name
+                    = cash.name
+                  .m-monthly-report__price
+                    = cash.price

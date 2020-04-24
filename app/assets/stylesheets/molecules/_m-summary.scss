@@ -1,0 +1,11 @@
+.m-summary {
+  background-color: $base;
+  border: solid 1px $border;
+  padding: 1em;
+}
+
+.m-summary__items {
+  @include flex-center(column);
+}
+
+.m-summary__item {}

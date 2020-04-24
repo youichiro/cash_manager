@@ -1,5 +1,5 @@
 .a-icon {
-  font-size: 2.25rem;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -7,9 +7,22 @@
 .a-icon__user {
   color: $base;
   transition: all .2s ease-out;
+  cursor: pointer;
 
   &:hover {
     color: $base;
+    opacity: .7;
+  }
+}
+
+.a-icon__plus {
+  color: $accent;
+  font-size: 2.5rem;
+  transition: all .2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent;
     opacity: .7;
   }
 }

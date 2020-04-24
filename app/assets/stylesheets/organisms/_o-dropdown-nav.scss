@@ -1,0 +1,23 @@
+.o-dropdown-nav {
+  border: solid 1px #ccc;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 14em;
+  display: none;
+  input:checked + & {
+    display: block;
+    z-index: 4;
+  }
+}
+
+.o-dropdown-nav__overlay {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}

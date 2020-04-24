@@ -4,6 +4,11 @@
 @import 'config/variables/colors';
 @import 'config/variables/font-family';
 
+// mixins
+@import 'config/mixins/break-points';
+@import 'config/mixins/flex';
+@import 'config/mixins/btn';
+
 // initializers
 @import 'config/initializers/ress';
 @import 'config/initializers/reset';

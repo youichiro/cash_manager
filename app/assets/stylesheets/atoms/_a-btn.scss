@@ -1,0 +1,32 @@
+.a-btn__edit {
+  @include btn;
+  background-color: $info;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: darken($info, 10%);
+    color: $base;
+  }
+}
+
+.a-btn__delete {
+  @include btn;
+  background-color: $accent;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: darken($accent, 10%);
+    color: $base;
+  }
+}
+
+.a-btn__back {
+  @include btn;
+  background-color: $secondary;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: darken($secondary, 10%);
+    color: $base;
+  }
+}

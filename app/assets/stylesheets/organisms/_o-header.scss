@@ -14,7 +14,7 @@
 
 .o-header__title {
   flex: 100;
-  font-size: 1.5rem;
+  font-size: 1.25em;
   text-align: center;
   color: $base;
 }
@@ -22,4 +22,5 @@
 .o-header__right-icon {
   flex: 0 0 2.25rem;
   text-align: center;
+  height: 100%;
 }

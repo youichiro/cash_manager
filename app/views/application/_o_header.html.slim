@@ -6,6 +6,9 @@
   .o-header__title
     = yield(:title)
   .o-header__right-icon
-    .a-icon
-      = link_to "", class: "a-icon__user" do
-        i.fas.fa-user-circle
+    .m-user-icon
+      label.a-icon(for="show-user-nav")
+        .a-icon__user
+          i.fas.fa-user-circle
+      input.a-toggle-checkbox#show-user-nav type="checkbox"
+      = render "o_dropdown_nav"

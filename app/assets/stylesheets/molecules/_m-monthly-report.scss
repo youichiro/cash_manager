@@ -1,0 +1,58 @@
+.m-monthly-report {}
+
+.m-monthly-report__title {
+  font-size: 1em;
+  color: $weaked-text;
+  margin-bottom: 0.5em;
+}
+
+.m-monthly-report__items {
+  background-color: $base;
+  border: solid 1px $border;
+  padding: 0.5em;
+}
+
+.m-monthly-report__item {
+  &:hover {
+    background-color: darken($base, 10%);
+  }
+}
+
+.m-monthly-report__link {
+  color: $default-text;
+
+  &:hover {
+    color: $main;
+    text-decoration: none;
+  }
+}
+
+.m-monthly-report__item-inner {
+  display: flex;
+  padding: 0.25em 0;
+
+  .m-monthly-report__item:not(:last-child) & {
+    border-bottom: solid 1px $border;
+  }
+}
+
+.m-monthly-report__date {
+  flex: 0 0 2.5em;
+  text-align: center;
+}
+
+.m-monthly-report__label {
+  flex: 0 0 2.5em;
+  text-align: center;
+}
+
+.m-monthly-report__name {
+  flex: 4;
+  padding: 0 0.5em;
+}
+
+.m-monthly-report__price {
+  flex: 0 0 5em;
+  text-align: right;
+  padding-right: 0.5em;
+}

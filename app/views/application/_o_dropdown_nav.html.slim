@@ -1,0 +1,18 @@
+.o-dropdown-nav
+  .m-list-links
+    .m-list-links__items
+      - if user_signed_in?
+        .m-list-links__item
+          = link_to edit_user_registration_path, class: "m-list-links__item-link" do
+            | プロフィールの編集
+        .m-list-links__item
+          = link_to destroy_user_session_path, method: :delete, class: "m-list-links__item-link" do
+            | ログアウト
+      - else
+        .m-list-links__item
+          = link_to new_user_registration_path, class: "m-list-links__item-link" do
+            | 新規登録
+        .m-list-links__item
+          = link_to new_user_session_path, class: "m-list-links__item-link" do
+            | ログイン
+    label.o-dropdown-nav__overlay(for="show-user-nav")

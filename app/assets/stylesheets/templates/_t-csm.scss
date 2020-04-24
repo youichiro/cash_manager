@@ -1,5 +1,16 @@
-$header-height: 3.5rem;
-$footer-height: 3.5rem;
+$header-height: 3em;
+$footer-height: 3em;
+
+.t-csm {
+  font-size: 1.2em;
+}
+
+// iPhone SE
+@include media-breakpoint-down(md) {
+  html {
+    font-size: 36px;
+  }
+}
 
 .t-csm__header {
   height: $header-height;
@@ -8,7 +19,7 @@ $footer-height: 3.5rem;
 .t-csm__main {
   background-color: $background;
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
-  padding: 0.5rem 1.5rem;
+  padding: 1em 1em;
 }
 
 .t-csm__footer {
