@@ -20,18 +20,25 @@
           | 場所
         .o-detail__end
           = @cash.place
+      .o-detail__item
+        .o-detail__start
+          | タグ
+        .o-detail__end
+            - @cash.tags.each do |tag|
+              span.a-tag = tag.name
   .t-detail__memo
     .o-detail__memo-title
       | メモ
     .o-detail__memo-body
       = @cash.memo
   .t-detail__buttons
-    .o-detail__btn
-      = link_to edit_cash_path(@cash), class: 'a-btn__edit' do
-        | 編集
-    .o-detail__btn
-      = link_to @cash, data: { confirm: 'Are you sure?' }, method: :delete, class: 'a-btn__delete' do
-        | 削除
-    .o-detail__btn
-      = link_to cashes_path, class: 'a-btn__back' do
-        | 戻る
+    .m-buttons__items
+      .m-buttons__item
+        = link_to edit_cash_path(@cash), class: 'a-btn__edit' do
+          | 編集
+      .m-buttons__item
+        = link_to @cash, data: { confirm: 'Are you sure?' }, method: :delete, class: 'a-btn__delete' do
+          | 削除
+      .m-buttons__item
+        = link_to cashes_path, class: 'a-btn__back' do
+          | 戻る

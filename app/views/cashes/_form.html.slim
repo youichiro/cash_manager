@@ -40,7 +40,7 @@
         .m-form__label
           = f.label :date, class: 'a-form__label'
         .m-form__field
-          = f.date_select :date, class: 'a-form__date-select'
+          = f.date_select :date, {}, class: 'a-form__date-select'
       .m-form__item
         .m-form__label
           = f.label :place, class: 'a-form__label'
@@ -52,5 +52,10 @@
         .m-form__field
           = f.text_area :memo, class: 'a-form__textarea'
 
-      .m-form__actions
-        = f.submit
+      .m-form__buttons
+        .m-buttons__items
+          .m-buttons__item
+            = f.submit class: 'a-btn__submit', value: '保存する'
+          .m-buttons__item
+            = link_to cashes_path, class: 'a-btn__back' do
+              | 戻る

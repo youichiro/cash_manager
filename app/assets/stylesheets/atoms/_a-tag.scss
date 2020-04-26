@@ -1,0 +1,11 @@
+.a-tag {
+  font-size: 0.7em;
+  background-color: $main;
+  color: $base;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
