@@ -16,5 +16,3 @@ test:
 production:
   <<: *default
   database: cash_manager_production
-  username: cash_manager
-  password: <%= ENV['CASH_MANAGER_DATABASE_PASSWORD'] %>
