@@ -3,5 +3,5 @@ threads threads_count, threads_count
 environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 plugin :tmp_restart
-bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
+bind "unix:///var/www/cash_manager/tmp/sockets/puma.sock"
 daemonize true
